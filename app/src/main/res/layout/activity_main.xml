@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/wendy_one"
+        android:textAlignment="center"
+        android:text="00:00:00"
+        android:textColor="@android:color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/wendy_one"
+        android:text="Today's workout"
+        android:textColor="@android:color/white"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="@+id/timeTextView"
+        app:layout_constraintStart_toStartOf="@+id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/wendy_one"
+        android:text="GO"
+        android:textColor="@android:color/white"
+        android:textSize="54sp"
+        android:onClick="goClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <ImageView
+        android:id="@+id/buttonReset"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/ic_close"
+        android:onClick="resetClick"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGo"
+        app:layout_constraintStart_toStartOf="@+id/buttonGo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
